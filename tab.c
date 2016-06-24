@@ -1,8 +1,8 @@
 #include<stdio.h>
 
 //Declare Variables Here
-int Aval=65,tab_val[100][100],i,j,plen,klen,x=0;
-char ptext[50],key[50]; 
+int Aval=65,tab_val[100][100],i,j,plen,klen,x=0,inc=0;
+char ptext[50],key[50],pval,kval,res[50]; 
 
 //Main Function
 main(){
@@ -34,14 +34,20 @@ void vtable(){
 void encode_op(){
 	//printf("%s",optext);
 	if(klen < plen){
-		for(i=0;i<plen;i++){
+		for(i=0;i<=plen;i++){
 			if(i > klen){
-				key[klen] = key[x];
+				//printf("In the if and loop %d\n",i);
+				key[i-1] = key[x];
 				x += 1;
 			}
 		}
 	} 
-printf("Klen:%d\n",klen);
+//printf("Klen:%d\n",klen);
 printf("%s",key);
+	for(i=0;i<klen;i++){
+		pval = ptext[i]-97;
+		kval = key[i]-97;
+		res[inc++] = tab_val[pval][kval]
+	}
+	printf("%s",res);
 }
-
