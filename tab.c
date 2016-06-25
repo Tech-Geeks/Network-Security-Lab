@@ -43,11 +43,11 @@ void encode_op(){
 		}
 	} 
 //printf("Klen:%d\n",klen);
-printf("%s",key);
-	for(i=0;i<klen;i++){
+printf("%s \n",key);
+	for(i=0;i<plen;i++){
 		pval = ptext[i]-97;
 		kval = key[i]-97;
-		res[inc++] = tab_val[pval][kval]
+		res[inc++] = tab_val[pval][kval];
 	}
 	printf("%s",res);
 }

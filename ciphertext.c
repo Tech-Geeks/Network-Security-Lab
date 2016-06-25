@@ -4,7 +4,7 @@ main(){
 	int slen,i,key;
 	printf("Enter the Plain Text: \n");
 	scanf("%s",&ptext);
-	printf("Enter the Key: \n");
+	printf("Enter Value to Encode: \n");
 	scanf("%d",&key);
 	slen = strlen(ptext);
 	printf("The Encoded Message Is: \n");
@@ -14,7 +14,7 @@ main(){
 		ctext[i] = ((ptext[i]-97)+key%26)+65;
 		printf("%c",ctext[i]);
 	}
-	printf("\n The Dencoded Message Is: \n");
+	printf("\nThe Dencoded Message Is: \n");
 	for(i=0;i<slen;i++){
 
 		mess[i] = (ctext[i]-65-key+26)%26+97;
